@@ -243,17 +243,7 @@ function renderContextSegment(tokens: number, maxTokens: number): string {
  * 渲染模型段
  */
 function renderModelSegment(model: string): string {
-  // 简化模型名称
-  const shortModel = model
-    .replace(/^claude-/, '')
-    .replace(/-sonnet$/, '')
-    .replace(/-opus$/, '')
-    .replace(/-haiku$/, '')
-    .replace(/-pro$/, '')
-    .replace(/-max$/, '')
-    .replace(/^(\d+)-(\d+)/, '$1.$2');
-
-  return `${THEME.accent}${shortModel}${THEME.reset}`;
+  return `${THEME.accent}${model}${THEME.reset}`;
 }
 
 /**

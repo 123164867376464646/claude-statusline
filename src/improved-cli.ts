@@ -385,7 +385,7 @@ async function main() {
     const quota = await getMimoQuota();
 
     // 从环境变量读取 Claude Code 数据
-    const model = process.env.CLAUDE_MODEL || 'unknown';
+    const model = process.env.CLAUDE_MODEL || process.env.ANTHROPIC_MODEL || 'unknown';
     const tokens = parseInt(process.env.CLAUDE_TOKENS || '0', 10);
     const maxTokens = parseInt(process.env.CLAUDE_MAX_TOKENS || '200000', 10);
     const cost = parseFloat(process.env.CLAUDE_COST || '0');

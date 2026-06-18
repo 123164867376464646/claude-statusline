@@ -1,0 +1,28 @@
+{
+  "name": "claude-statusline",
+  "version": "1.0.0",
+  "description": "Beautiful statusline plugin for Claude Code",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "claude-statusline": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js"
+  },
+  "keywords": ["claude", "statusline", "cli", "terminal"],
+  "license": "MIT",
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "ansi-escapes": "^7.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
